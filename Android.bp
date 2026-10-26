@@ -29,6 +29,19 @@ license {
     ],
 }
 
+cc_library_headers {
+    name: "libandroid_aidltrace",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    export_include_dirs: ["trace"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
 bootstrap_go_package {
     name: "aidl-soong-rules",
     pkgPath: "android/soong/aidl",
